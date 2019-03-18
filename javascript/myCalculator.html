@@ -1,0 +1,68 @@
+<h1>Calculator</h1>
+
+<h2>Input 1</h2>
+<input id = numberInput1>
+<h2>Input 2</h2>
+<input id = numberInput2>
+<br>
+<br>
+<br>
+<button onclick = "onPlusClick ()">+</button>
+<p id="plus"></p>
+<button onclick = "onSubtractClick ()">-</button>
+<p id="subtract"></p>
+<button onclick = "onMultiplicationClick ()">*</button>
+<p id="multiply"></p>
+<button onclick = "onDivisionClick ()">/</button>
+<p id="divide"></p>
+
+<script>
+console.log ("interface initialized");
+
+//creating values for inputs
+// let input1 = parseInt (document.getElementById("numberInput1").value);
+// let input2 = parseInt (document.getElementById("numberInput2").value);
+// let inputAdd = input1 + input2;
+// let inputSubtract = input1 - input2;
+// let inputMultipy = input1 * input2;
+// let inputDivide = input1 / input2;
+//additon
+console.log ("values initialized");
+function onPlusClick () {
+let input1 = parseInt (document.getElementById("numberInput1").value);
+let input2 = parseInt (document.getElementById("numberInput2").value);
+let inputAdd = input1 + input2;
+console .log (input1);    
+console.log ("Your Total is ",inputAdd);
+};
+
+//subtraction
+function onSubtractClick () {
+    let input1 = parseInt (document.getElementById("numberInput1").value);
+    let input2 = parseInt (document.getElementById("numberInput2").value);
+    let inputSubtract = input1 - input2;
+    console.log ("Your Total is ",inputSubtract);
+};
+
+//multiplication
+
+function onMultiplicationClick () {
+    let input1 = parseInt (document.getElementById("numberInput1").value);
+    let input2 = parseInt (document.getElementById("numberInput2").value);
+    let inputMultipy = input1 * input2;
+    console.log ("Your Total is ",inputMultipy);
+};
+
+//division
+function onDivisionClick (){
+    let input1 = parseInt (document.getElementById("numberInput1").value);
+    let input2 = parseInt (document.getElementById("numberInput2").value);
+    let inputDivide = input1 / input2;
+    console.log ("Your Total is ",inputDivide);
+};
+
+
+
+
+
+</script>

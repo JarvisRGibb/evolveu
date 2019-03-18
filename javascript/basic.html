@@ -1,0 +1,51 @@
+<!-- Header 1 "Hellow world fromn HTml-->
+<h1>Hello World from HTML</h1>
+<!-- creating text field input-->    
+<input>
+<!-- break line-->
+<br>
+<!--create button "click me-->
+<button type="button">CLICK ME!!!!!!!!!!!!!!!!!!!!</button>
+<!--Inline JS-->
+<script> type = "text/javascript">
+//logging to console in inline js
+    console.log ("Hello World from HTLM");
+    </script>
+
+<!-- telling this script to execute basic.js-->
+<script type="text/javascript" src='basic.js'> </script>
+
+<br>
+
+<h1>Exercise - Working with HTML input</h1>
+
+<!-- Create button named onclick, set to trigger onClickFunction, lable it free memes -->
+<button onclick = "onClickFunction()">Free Memes</button>
+<!-- Assign button and id -->
+<p id="memes"></p>
+<!--  create input taggeds htlmInput -->
+<input id = htmlInput>
+
+<script>
+// Create function, create 2 text variables
+//create text 3 as a combination of 1 & 2 
+function onClickFunction () {
+    var text1 = "Spicy Memes";
+    var text2 = "Tangy Memes";
+    var text3 = text1 + " and " + text2 + " They are all yours";
+    //var textInt = parseInt()
+    // assign this function  to the button id'd as memes.
+
+
+    document.getElementById("memes").innerHTML = text3
+    
+    var htmlValue = parseInt (document.getElementById("htmlInput").value);
+    var htmlNum = 1;
+    var htmlValue2 = htmlNum+htmlValue;
+   // document.getElementById("htmlInput").value;
+
+    console.log (htmlValue, "+ 1 =", htmlValue2);
+}
+
+
+</script>

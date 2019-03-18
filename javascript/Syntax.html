@@ -1,0 +1,120 @@
+<h>test</h>
+
+<!--Define Attributes and Variables-->
+
+<script> 
+    //instantiating our number variables  
+    var varNumber1 = 17;
+    var varNumber2 = 4;
+    var varTotal = varNumber1 + varNumber2;
+
+        //output our numbers in console as a string
+        console.log ("VarNumber1 = " , varNumber1, " , VarNumber2 = " , varNumber2 , " , VarNumber1 + Varnumber2 = " , varTotal);
+
+    // instantiating our array variable.
+    var colors = ['Blue', 'Red', 'Green'];
+        // printing array to console
+        console.log ("The colors are " + colors)
+
+// creating a bool
+var doColorsExist = true;
+// printing the sate of the bool to the console
+console.log ("Colors do exist! This statement is " , doColorsExist);
+
+    //creating the fruit object class
+    let fruit = new Object();
+
+        // creating variables using the fruit class
+        fruit.name = "Banana";
+        fruit.color = "yellow";
+
+            //Printing the fruit varaibles to console    
+            console.log (fruit.name, "'s are", fruit.color);
+            //Printing the whole class to console
+            console.log (fruit);
+
+//creating an undefined variable
+    var undefined = 'nerd';
+    
+        //"attempting" to print the undefined varible to console
+        console.log (undefined), "2";
+        </script>
+<!--Sample If/Else statement-->
+<script>
+    //instatiating variables
+    var ifNumber = 1;
+
+        if (ifNumber == 1) {
+            console.log ("The number is 1");
+        } else if (ifNumber == 2){
+        console.log ("The Number is 2");
+            } else {
+                console.log ("invalid input");
+            }
+</script>
+<!--functions-->
+<script>
+//Creating the function with parameters name and age
+function statistics (name, age){
+//printing the parameters to console
+console.log (name);
+console.log (age);
+return;
+}
+// changing those parameters at runtime.
+statistics ('Jim', '40')
+</script>
+<!-- Arrays -->
+<script>
+//Creating Array
+let people = ["Julian", "Ricky", "Bubbles"]
+
+    //logging array people
+    console.log (people[0], people[1], people[2])
+    //edting the array
+    people[0] = "Jim";
+    people[1] = "Randy";
+    people[2] = "Barb";
+    //loging it a second time to display the change to the array, it should now display as Jim, Randy, Barb.
+    console.log (people[0], people[1], people[2])
+</script>
+<!-- Loop's -->
+<script>
+    //instantiate variables for our loops
+var whileNum = 0;
+
+// while loop
+// Do this while whileNum is less then 10
+while (whileNum < 10) {
+    // adds one to whilenum every frame
+    whileNum++;
+    //print whilenum to console
+    console.log (whileNum);
+};
+//Do-while loop
+// do this, while whileNum greater then 10 or less then 20.
+do {
+    whileNum++
+    console.log("it's getting bigger", whileNum)
+} while (whileNum > 10 && whileNum < 20);
+
+//for loop
+// for(create variable; set condition, create step)
+// create forLoopVar, set it to 0; for as long as forLoopVar is less then 5; add +1 to forloop var, and execute console.log every frame
+for(let forLoopVar = 0; forLoopVar < 5; forLoopVar++) {
+    console.log("Hello world from a for loop", forLoopVar);
+}
+//for-in loop
+
+// let laptop = {brand: "MSI", oSystem: "Windows", material: "Aluminium", Price: 1900};
+// let forInArr = [3, 5, 7];
+// forInArr.foo = 'hello';
+
+// let forText = "";
+// for (let forX in laptop)
+// {
+//     text += laptop[forX];
+//     console.log (forX);
+// };
+// console.log (forText);
+</script>

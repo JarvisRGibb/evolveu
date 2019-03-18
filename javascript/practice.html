@@ -1,0 +1,47 @@
+<div>
+<H1>$ Practice</H1>
+</div>
+
+<script>
+
+/*
+
+	--- functions and braces nightmare 
+
+*/
+console.log("Hello from exercises");
+
+const array1 = [3,1];
+
+console.log("Value 1", array1);
+
+
+// write the function that will make this work
+
+function orderArray (memeArray){
+
+
+console.log("in function",array1);
+
+if(memeArray[0]>array1[1]){
+return [memeArray[1],memeArray[0]];
+} else {
+     return memeArray;
+}
+}
+
+
+console.log("Should Be: 1, 3:", 
+	orderArray(array1)) ;
+
+console.log("Should Be: 1, 5:", 
+	orderArray([1, 5]));
+
+
+console.log("Should Be: 10, 20:", 
+	orderArray([20, 10]));
+
+    function makeEmail(fname, lname) {
+	return `${fname}.${lname}@evolveu.ca`
+}
+</script>

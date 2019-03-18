@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(rgb(43, 59, 59), rgba(56, 35, 33, 0.651));
+    font-family: helvetica;
+  }
+  
+  .clPanel {
+	background: rgb(255, 255, 255);
+	border: solid;
+	width: 50%;
+	min-height: 200px;
+	margin: left;
+	text-align: left;
+	padding: 30px;
+	border-radius: 10px;
+	padding: 10px;
+	/*margin: 20px;*/
+	box-shadow: 10px 10px 15px;}
+
+  .clPanelsub {
+	background: rgb(235, 235, 235);
+	border: solid;
+	width: 50%;
+	min-height: 200px;
+	margin: left;
+	text-align: left;
+	padding: 30px;
+	border-radius: 10px;
+	padding: 10px;
+	/*margin: 20px;*/
+	box-shadow: 10px 10px 15px;
+}
+  .clPanelLeft {
+	background: rgb(255, 255, 255);
+	border: solid;
+	width: 30%;
+	min-height: 200px;
+	margin: left;
+	text-align: left;
+	padding: 30px;
+	border-radius: 10px;
+	padding: 10px;
+	/*margin: 20px;*/
+	box-shadow: 10px 10px 15px;
+}
+
+.clPanelGray {
+	background: rgb(138, 136, 136);
+	border: solid;
+	width: 50%;
+	min-height: 200px;
+	margin: auto;
+	text-align: left;
+	padding: 30px;
+	border-radius: 10px;
+	padding: 10px;
+	/*margin: 20px;*/
+	box-shadow: 10px 10px 15px;
+}
+
+.clPanelRight {
+	background: rgb(246, 202, 209);
+	border: solid;
+	width: 50%;
+	min-height: 200px;
+	margin: right;
+	text-align: right;
+	padding: 30px;
+	border-radius: 10px;
+	padding: 10px;
+	/*margin: 20px;*/
+	box-shadow: 10px 10px 15px;
+}

@@ -1,0 +1,66 @@
+<h1>
+Tax Calculator
+</h1>
+
+<br>
+
+<h2>
+Input your anual earnings
+</h2>
+
+<br>
+
+<input id = "taxInput">
+
+<br>
+
+<button id = "taxButton" + onclick = "taxFunction()">Calculate Taxes</button>
+
+<script>
+var firstBracketLimit = 47630;
+var firstBracketFlatTax = 7144.5;
+var secondBracketLimit = 95259;
+var secondBracketFlatTax = 9763.945;
+var thirdBracketLimit = 147667;
+var thirdBracketFlatTax = 13626.08;
+var forthBracketLimit = 210371;
+var forthBracketFlatTax = 18184.16;
+function taxFunction(){
+console.log ("taxFunction Triggered");
+let taxNumber = parseInt (document.getElementById("taxInput").value);
+console.log ("Anual Earnings are " + taxNumber);
+        if (taxNumber<47630 || taxNumber === 47630) {
+            console.log ("First Tax Bracket");
+            let firstBracketNum = taxNumber * 0.15;
+            console.log("Your taxes are " + firstBracketNum);
+        } else if (taxNumber>47630 && taxNumber<95259 || taxNumber=== 95259){
+        console.log ("Second Tax Bracket");
+        var secondBracketNum = taxNumber - 47630; 
+        let secondBracketNumTax = secondBracketNum * 0.225;
+        let secondBracketTaxes = firstBracketFlatTax + secondBracketNumTax;
+        console.log ("Your taxes are " + secondBracketTaxes);
+    } else if (taxNumber>secondBracketLimit && taxNumber < thirdBracketLimit || taxNumber == thirdBracketLimit) {
+
+        console.log ("Third Bracket");
+        var thirdBracketNum = taxNumber - secondBracketLimit;
+        var thirdBracketTaxes = thirdBracketNum * 0.26; 
+        var thirdBracketTaxTotal = firstBracketFlatTax + secondBracketFlatTax + thirdBracketTaxes;
+        console.log ("Your taxes are " + thirdBracketTaxTotal);
+    } else if (taxNumber>thirdBracketLimit && taxNumber < forthBracketLimit || taxNumber == forthBracketLimit) {
+        console.log ("Forth Bracket");
+        var forthBracketNum = taxNumber - thirdBracketLimit;
+        var forthBracketTaxes = forthBracketNum * 0.29;
+        var forthBracketTaxTotal = firstBracketFlatTax + secondBracketFlatTax + thirdBracketFlatTax + forthBracketTaxes;
+        console.log ("Your taxes are " + forthBracketTaxTotal);
+    } else if (taxNumber > forthBracketLimit) {
+
+        console.log ("Fifth Bracket")
+        var fifthBracketNum = taxNumber - forthBracketLimit;
+        var fifthBracketTaxes = fifthBracketNum * 0.33;
+        var fifthBracketTaxTotal = firstBracketFlatTax + secondBracketFlatTax + thirdBracketFlatTax + forthBracketFlatTax + fifthBracketTaxes;
+        console.log ("Your taxes are " + fifthBracketTaxTotal);
+    } else {
+        console.log ("Invalid input... Please enter a number greater then 0");
+    }
+    };
+</script>

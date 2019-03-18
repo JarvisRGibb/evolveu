@@ -1,0 +1,111 @@
+<!-- <script>
+    const data = {
+        staff: [
+            { fname: "Jane", lname: "Smith", balance: 10 },
+            { fname: "Liam", lname: "Henry", balance: 1000 },
+            { fname: "Emma", lname: "Jones", balance: 1330 },
+            { fname: "Olivia", lname: "Notly", balance: 310 },
+            { fname: "Noah", lname: "Ho", balance: 503 },
+            { fname: "William", lname: "Lee", balance: 520 },
+            { fname: "Benjamin", lname: "Amis", balance: 150 },
+        ],
+        company: "EvolveU",
+        city: "Calgary",
+        prov: "Alberta"
+    };
+
+    // Write the function after this comment ---
+    //console.log(data.staff[testmeme].fname + data.staff[testmeme].lname);
+    function assertEquals(p1, p2) {
+        //console.log ("in assert equats");
+        //console.log (p1 , p2)
+        if (p1 === p2) {
+            //console.log ("in the if");
+            console.log("ok " + p1);
+            return true;
+        } else {
+            console.log(p1, " does not equal ", p2);
+        }
+    }
+
+    function makeEmailObject(obj) {
+        return (obj.fname + "." + obj.lname + "@evolveu.ca")
+    }
+
+
+
+    function loopStaff(arr) {
+
+        console.log("hey were in this bitch");
+        console.log("this is an array", arr);
+        const newMeme = [];
+        arr.forEach(function (element) {
+            console.log(element);
+            newMeme.push(makeEmailObject(element))
+        });
+        return newMeme;
+    }
+
+
+
+
+    // and before this comment ---
+
+    console.log('-----loopStaff')
+    const staffEmail = loopStaff(data.staff);
+    console.log(staffEmail);
+    assertEquals('Jane.Smith@evolveu.ca', staffEmail[0]);
+    assertEquals('Olivia.Notly@evolveu.com', staffEmail[3]);
+    assertEquals('Benjamin.Amis@evolveu.ca', staffEmail[6]);
+
+</script> -->
+
+<script>
+     var totalAgeNumber = 0;
+    const data2 = {
+        people: [
+            { fname: "Jane", age: 20 },
+            { fname: "Liam", age: 20 },
+            { fname: "Emma", age: 20 },
+            { fname: "Olivia", age: 20 },
+            { fname: "Noah", age: 20 },
+
+        ]
+    };
+    function assertEquals(p1, p2) {
+        //console.log ("in assert equats");
+        //console.log (p1 , p2)
+        if (p1 === p2) {
+            //console.log ("in the if");
+            console.log("ok " + p1);
+            return true;
+        } else {
+            console.log(p1, " does not equal ", p2);
+        }
+    }
+
+    function loopPeople(arr1) {
+
+        console.log("hey were in this bitch1");
+        console.log("this is an array", arr1);
+        console.log (arr1.length);
+        const newMeme1 = [];
+        let ageTotal = 0;
+        //arr1.forEach(function (element) {
+            for (i = 0; i < arr1.length; i++) {
+                //console.log (arr1 [i].age);
+                ageTotal += arr1[1].age;
+            }
+            console.log (ageTotal);
+            return ageTotal;
+    }
+
+    
+    function avgAge (arr1){
+    return loopPeople(arr1) / arr1.length;
+    }
+    
+    assertEquals(loopPeople(data2.people), 100);
+
+    assertEquals(avgAge(data2.people), 20);
+</script>

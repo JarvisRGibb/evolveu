@@ -1,0 +1,60 @@
+<!-- <script type="text/javascript" src="practice2.js"></script> -->
+
+
+<div>
+    <h1>Practice 11/03/2019</h1>
+</div>
+
+<script>
+    /*	
+        Write the function that will create this output:
+    
+    *** the two values are not the same:
+        p1--> a
+        p2--> b
+    *** the two values are not the same:
+        p1--> 1
+        p2--> 2
+    *** the two values are not the same:
+        p1--> 2
+        p2--> 2
+    */
+
+    // Write the function after this comment ---
+    let areTheyEqual = false;
+
+    assertEquals();
+
+    function assertEquals(p1, p2) {
+        //console.log("assetEquals function triggered");
+        if (p1 === p2) {
+            console.log("ok " + p1);
+            return true;
+        }
+
+        console.log("p1 = ", p1, "p2 = ", p2, "Are they are equal ", areTheyEqual);
+        // console.log ("Logging p1: " + p1);
+        // console.log ("Logging p2: " + p2);
+        // console.log ("Logging arraylarry: " + arrayLarry);
+
+        return false;
+    }
+
+    function makeEmailArr(arrayEmail) {
+        let emailAddress = arrayEmail[0] + "." + arrayEmail[1] + "@evolveu.ca";
+
+        return emailAddress
+    }
+
+    // and before this comment ---
+    const arrayLarry = ['larry', 'shumlich'];
+    assertEquals('larry.shumlich@evolveu.ca', makeEmailArr(arrayLarry));
+    assertEquals('bill.smith@evolveu.com', makeEmailArr(['bill', 'smith']));
+    assertEquals('amy.jones@evolveu.ca', makeEmailArr(['amy', 'jones']));
+    assertEquals("a", "b");
+    assertEquals("a", "a");
+    assertEquals(1, 2);
+    assertEquals(2, 2);
+    assertEquals("2", 2);
+    assertEquals("This value", "This value");
+</script>
