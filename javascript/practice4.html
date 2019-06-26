@@ -36,11 +36,11 @@
 
     function loopStaff(arr) {
 
-        console.log("hey were in this bitch");
-        console.log("this is an array", arr);
+        //console.log("hey were in loopStaff");
+        //console.log("this is an array", arr);
         const newMeme = [];
         arr.forEach(function (element) {
-            console.log(element);
+            //console.log(element);
             newMeme.push(makeEmailObject(element))
         });
         return newMeme;
@@ -51,9 +51,9 @@
 
     // and before this comment ---
 
-    console.log('-----loopStaff')
+    //console.log('-----loopStaff')
     const staffEmail = loopStaff(data.staff);
-    console.log(staffEmail);
+    //console.log(staffEmail);
     assertEquals('Jane.Smith@evolveu.ca', staffEmail[0]);
     assertEquals('Olivia.Notly@evolveu.com', staffEmail[3]);
     assertEquals('Benjamin.Amis@evolveu.ca', staffEmail[6]);
@@ -86,9 +86,9 @@
 
     function loopPeople(arr1) {
 
-        console.log("hey were in this bitch1");
-        console.log("this is an array", arr1);
-        console.log (arr1.length);
+        //console.log("hey were in loopPeople");
+        //console.log("this is an array", arr1);
+        //console.log (arr1.length);
         const newMeme1 = [];
         let ageTotal = 0;
         //arr1.forEach(function (element) {
@@ -96,7 +96,7 @@
                 //console.log (arr1 [i].age);
                 ageTotal += arr1[1].age;
             }
-            console.log (ageTotal);
+//            console.log (ageTotal);
             return ageTotal;
     }
 

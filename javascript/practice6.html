@@ -1,0 +1,95 @@
+<script>
+const data = {
+        staff: [
+            { fname: "Jane", lname: "Smith", balance: 10 },
+            { fname: "Liam", lname: "Henry", balance: 1000 },
+            { fname: "Emma", lname: "Jones", balance: 1330 },
+            { fname: "Olivia", lname: "Notly", balance: 310 },
+            { fname: "Noah", lname: "Ho", balance: 503 },
+            { fname: "William", lname: "Lee", balance: 520 },
+            { fname: "Benjamin", lname: "Amis", balance: 150 },
+        ],
+        company: "EvolveU",
+        city: "Calgary",
+        prov: "Alberta"
+    };
+
+    var totalAgeNumber = 0;
+    const nameAge = [
+   { name: "Moe", age: 20 },
+   { name: "Larry", age: 25 },
+   { name: "Curley", age: 15 },
+   { name: "Shemp", age: 35 },
+   { name: "Joe", age: 12 }
+
+]
+
+    // Write the function after this comment ---
+    //console.log(data.staff[testmeme].fname + data.staff[testmeme].lname);
+    // function assertEquals(p1, p2) {
+    //     //console.log ("in assert equats");
+    //     console.log (p1 , p2)
+    //     if (p1 === p2) {
+    //         //console.log ("in the if");
+    //         console.log("ok " + p1);
+    //         return true;
+    //     } else {
+    //         console.log(p1, " does not equal ", p2);
+    //     }
+    // }
+    function assertEquals(p1, p2) {
+        //console.log ("in assert equats");
+        //console.log (p1 , p2)
+        if (p1 === p2) {
+            //console.log ("in the if");
+            console.log("ok " + p1);
+            return true;
+        } else {
+            console.log(p1, " does not equal ", p2);
+        }
+    }
+    const totalBalance = (obj) => {
+    let finalBalance = obj.reduce(
+        (accumulator, currentValue) => ({balance: accumulator.balance + currentValue.balance})
+    )
+    return finalBalance.balance
+    
+    }
+
+    const totalAge = (obj) => {
+    let finalAge = obj.reduce(
+        (accumulator, currentValue) => ({age: accumulator.age + currentValue.age})
+       
+    )
+    console.log ("gay people", finalAge);
+    return finalAge.age
+    
+    }
+
+    const averageAge = (age, n)=> {
+
+        return (age/n)
+    }
+    
+let largeBalances = data.staff.filter(data => data.balance >= 1000)
+let tot = data.staff.reduce((accumulator, currentValue) => (accumulator + currentValue.balance), 0)
+console.log (tot);
+console.log (data.staff[1]);
+// console.log(largeBalances);
+assertEquals(largeBalances[0].fname, "Liam");
+assertEquals(largeBalances[1].fname, "Emma");
+assertEquals(tot, 3823);
+
+
+  console.log ("total balace is = ", totalBalance(data.staff));
+  console.log ("total age is = ", totalAge(nameAge));
+  console.log ("avg age is = ", averageAge(totalAge(nameAge),nameAge.length));
+    
+</script>
+
+<!-- <script>
+function getBalances(arreglo) {
+   const totBalance = arreglo.reduce((acum, nextval) => ({ balance: acum.balance + nextval.balance }));
+   return (totBalance.balance)
+}
+</script> -->

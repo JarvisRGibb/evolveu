@@ -1,0 +1,79 @@
+<script>
+    const data = {
+        staff: [
+            { fname: "Jane", lname: "Smith", balance: 10 },
+            { fname: "Liam", lname: "Henry", balance: 1000 },
+            { fname: "Emma", lname: "Jones", balance: 1330 },
+            { fname: "Olivia", lname: "Notly", balance: 310 },
+            { fname: "Noah", lname: "Ho", balance: 503 },
+            { fname: "William", lname: "Lee", balance: 520 },
+            { fname: "Benjamin", lname: "Amis", balance: 150 },
+        ],
+        company: "EvolveU",
+        city: "Calgary",
+        prov: "Alberta"
+    };
+
+    // Write the function after this comment ---
+    //console.log(data.staff[testmeme].fname + data.staff[testmeme].lname);
+    function assertEquals(p1, p2) {
+        //console.log ("in assert equats");
+        console.log (p1 , p2)
+        if (p1 === p2) {
+            //console.log ("in the if");
+            console.log("ok " + p1);
+            return true;
+        } else {
+            console.log(p1, " does not equal ", p2);
+        }
+    }
+
+    // function makeEmailObject(obj) {
+    //     return (obj.fname + "." + obj.lname + "@evolveu.ca")
+    // }
+
+
+
+    // function loopWithEach(arr) {
+    //     console.log("this is an array", arr);
+    //     const newMeme = [];
+    //     arr.forEach(function (element) {
+    //         console.log(element);
+    //         newMeme.push(makeEmailObject(element))
+
+    //     });
+    //     return newMeme;
+    // }
+//map
+    function getName (arr){
+        console.log ("array getname",arr.lname);
+        var fullEmailAddress = arr.fname +'.'+ arr.lname+'@evolveu.ca';
+        return fullEmailAddress;
+        console.log("full email ",fullEmailAddress);
+    }
+
+    function loopWithMap(arr) {
+        console.log("this is an array", arr);
+        const mapMeme = data.staff.map(getName);
+        console.log ("mapmeme =", mapMeme);
+        return mapMeme;
+    }
+
+//map
+
+
+    // console.log('-----emailWithEach')
+    // const emailWithEach = loopWithEach(data.staff);
+    // // console.log(emailWithEach);
+    // assertEquals('Jane.Smith@evolveu.ca', emailWithEach[0]);
+    // assertEquals('Olivia.Notly@evolveu.com', emailWithEach[3]);
+    // assertEquals('Benjamin.Amis@evolveu.ca', emailWithEach[6]);
+
+console.log('-----emailWithMap')
+const emailWithMap = loopWithMap(data.staff);
+// console.log(emailWithMap);
+assertEquals('Jane.Smith@evolveu.ca', emailWithMap[0]);
+assertEquals('Olivia.Notly@evolveu.com', emailWithMap[3]);
+assertEquals('Benjamin.Amis@evolveu.ca', emailWithMap[6]);
+
+</script>
